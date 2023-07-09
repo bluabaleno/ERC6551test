@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "forge-std/Test.sol";
+import {Test, console} from "forge-std/Test.sol";
 
 import "../src/ERC6551Registry.sol";
 import "../src/lib/ERC6551AccountLib.sol";
@@ -50,6 +50,7 @@ contract RegistryTest is Test {
             tokenId,
             salt
         );
+        console.log(deployedAccount, registryComputedAddress);
         assertEq(deployedAccount, registryComputedAddress);
 
         address libraryComputedAddress = ERC6551AccountLib.computeAddress(

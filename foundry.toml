@@ -2,6 +2,10 @@
 src = 'src'
 out = 'out'
 libs = ['lib']
+remappings =['openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/',
+'ds-test/=lib/forge-std/lib/ds-test/src/',
+'sstore2/=lib/sstore2/contracts/',
+'forge-std/=lib/forge-std/src/']
 
 solc = "0.8.17"
 optimizer = true
